@@ -128,12 +128,11 @@ h2 .bold {
 
 	#le-saviez-vous-header {
 		height: 100%;
+		width: 423px;
 		background: transparent url('../img/bg_le_saviez_vous.png') no-repeat left top;
 		background-size: cover;
-		width: 30%;
-		max-width: 420px;
-		display: inline-block;
 		padding: 50px 0 0 40px;
+		float: left;
 	}
 
 	#le-saviez-vous-header h2 .bold {
@@ -145,17 +144,18 @@ h2 .bold {
 	}
 
 	#le-saviez-vous-texte {
+		height: 100%;
+		min-width: 937px;
+		margin-left: 423px;
 		background-color: rgb(255, 255, 255);
 		background-color: rgba(255, 255, 255, 0.8);
-		display: inline-block;
-		vertical-align: top;
-		width: 70%;
+		padding: 100px 0 80px;
 	}
 
 	#le-saviez-vous-texte p {
-		max-width: 700px;
 		color: black;
 		font-size: 110%;
+		width: 70%;
 	}
 
 	#le-saviez-vous-texte .bold {
