@@ -41,6 +41,14 @@ h2 .bold {
 	font-size: 200%;
 }
 
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
 #presentation,
 #infos-complementaires {
 	background: #ffffff url(../img/bg_site.jpg) no-repeat left top;

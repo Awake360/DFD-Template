@@ -22,9 +22,9 @@
     	var reponse = $(this).find('input:checked').attr('value');
 
     	if (goodone == reponse) {
-    		$(this).siblings('.reponse').find('.reponse-utilisateur').html('Bonne réponse');
+    		$(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse</span>');
     	} else {
-    		$(this).siblings('.reponse').find('.reponse-utilisateur').html('Mauvaise réponse');
+    		$(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse</span>');
     	}
 
     	//Afficher ou non "question suivante"
