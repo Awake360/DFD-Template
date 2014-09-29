@@ -3,7 +3,7 @@ body {
 	height: 100%;
 	font-family: open_sanscondensed;
 	font-size: 20px;
-	min-width: 1360px;
+	min-width: 1230px;
 }
 
 section {
@@ -118,7 +118,8 @@ h2 .bold {
 		margin: 0 50px 0 0;
 	}
 
-	#questionnaire input[type='submit'] {
+	#questionnaire input[type='submit'],
+	.question-suivante {
 		font-size: 200%;
 		position: absolute;
 		bottom: 0;
@@ -153,7 +154,7 @@ h2 .bold {
 		width: 130px;
 	}
 
-	#le-saviez-vous-texte {
+	.le-saviez-vous-texte {
 		height: 100%;
 		min-width: 937px;
 		margin-left: 423px;
@@ -162,13 +163,13 @@ h2 .bold {
 		padding: 100px 0 80px;
 	}
 
-	#le-saviez-vous-texte p {
+	.le-saviez-vous-texte p {
 		color: black;
 		font-size: 110%;
 		width: 70%;
 	}
 
-	#le-saviez-vous-texte .bold {
+	.le-saviez-vous-texte .bold {
 		color: red;
 		font-size: 150%;
 	}
