@@ -6,6 +6,10 @@ body {
 	min-width: 1360px;
 }
 
+section {
+	overflow: hidden;
+}
+
 h1 {
 	font-size: 400%;
 	text-transform: uppercase;
@@ -30,7 +34,7 @@ h2 .bold {
 
 #presentation,
 #infos-complementaires {
-	background: #ffffff url('../img/bg_site.jpg') no-repeat left top;
+	background: #ffffff url(../img/bg_site.jpg) no-repeat left top;
 	background-size: cover;
 	color: #ffffff;
 }
@@ -44,7 +48,7 @@ h2 .bold {
     }
 
 	#presentation-wrapper {
-		background: transparent url('../img/bg-wrapper-presentation.png') no-repeat left top;
+		background: transparent url(../img/bg-wrapper-presentation.png) no-repeat left top;
 		background-size: cover;
 		overflow: hidden;
 	}
@@ -113,12 +117,13 @@ h2 .bold {
 		font-size: 200%;
 		position: absolute;
 		bottom: 0;
+		left: 415px;
 		border: none;
 		color: white;
 		font-weight: bold;
 		text-transform: uppercase;
 		padding: 0 5px 0 60px;
-		background: black url('../img/triangle-black.jpg') no-repeat left top;
+		background: black url(../img/triangle-black.jpg) no-repeat left top;
 	}
 
 /** LE SAVIEZ VOUS **/
@@ -129,7 +134,7 @@ h2 .bold {
 	#le-saviez-vous-header {
 		height: 100%;
 		width: 423px;
-		background: transparent url('../img/bg_le_saviez_vous.png') no-repeat left top;
+		background: transparent url(../img/bg_le_saviez_vous.png) no-repeat left top;
 		background-size: cover;
 		padding: 50px 0 0 40px;
 		float: left;
@@ -165,8 +170,50 @@ h2 .bold {
 
 /** UNE QUESTION **/
 	#une-question {
+		width: 70%;
 		background-color: rgb(0, 0, 0);
 		background-color: rgba(0, 0, 0, 0.8);
+		padding: 50px 120px 130px;
+		float: left;
+
+	}
+
+	#une-question h2 {
+		font-size: 250%;
+		font-weight: bold;
+	}
+
+	#une-question label {
+		display: block;
+		font-weight: normal;
+		margin: 15px 0 0 0;
+	}
+
+	#une-question-coordonnees {
+		float: left;
+		margin: 0 40px 0 0;
+	}
+
+	#une-question-textarea {
+		overflow: hidden;
+	}
+
+	#une-question-textarea textarea {
+		height: 265px;
+		width: 100%;
+	}
+
+	#une-question-submit {
+		clear: both;
+		font-size: 150%;
+		font-weight: bold;
+		width: 130px;
+		line-height: 38px;
+		text-transform: uppercase;
+		background-color: #de4443;
+		border: none;
+		float: right;
+		margin: 25px 0 0 0;
 	}
 
 /** FONTS **/
