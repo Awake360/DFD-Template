@@ -20,6 +20,10 @@ h2 {
 	text-transform: uppercase;
 }
 
+h3 {
+	font-weight: bold;
+}
+
 a {
 	color: white;
 }
@@ -37,6 +41,7 @@ h2 .bold {
 	background: #ffffff url(../img/bg_site.jpg) no-repeat left top;
 	background-size: cover;
 	color: #ffffff;
+	position: relative;
 }
 
 /** PRESENTATION **/
@@ -214,6 +219,27 @@ h2 .bold {
 		border: none;
 		float: right;
 		margin: 25px 0 0 0;
+	}
+
+/** REFERENCES **/
+	#references {
+		background-color: rgb(255, 255, 255);
+		background-color: rgba(255, 255, 255, 0.8);
+		color: black;
+		height: 100%;
+		width: 30%;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		padding: 60px;
+	}
+
+	#references img {
+		height: 100px;
+	}
+
+	#references p {
+		font-size: 90%;
 	}
 
 /** FONTS **/
