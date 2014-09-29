@@ -41,6 +41,8 @@
 
 		<section id="questionnaire">
 			<div id="question-01" class="question">
+				<a href="#" class="question-precedente">< Revenir à la question précédente</a>
+
 				<form class="question-form">
 					<h2>Question <span class="bold">01</span></h2>
 					<p>Selon vous, les personnes sourdes peuvent-elles téléphoner ?</p>
@@ -54,6 +56,10 @@
 				</form>
 
 				<div class="reponse" data-goodone="1">
+					<p class="rappel-question">Selon vous, les personnes sourdes peuvent-elles téléphoner ?</p>
+
+					<p class="reponse-utilisateur"></p>
+
 					<p>Une personne sourde ou malentendante peut téléphoner.</p>
 
 					<p>Des plateformes téléphoniques ont été mises en place afin de permettre à ces personnes de téléphoner ou d'être contactées par téléphone.</p>
@@ -65,6 +71,8 @@
 			</div>
 
 			<div id="question-02" class="question">
+				<a href="#" class="question-precedente">< Revenir à la question précédente</a>
+
 				<form class="question-form">
 					<h2>Question <span class="bold">02</span></h2>
 					<p>D'après-vous, quelle est la proportion de handicap invisible?</p>
@@ -80,6 +88,10 @@
 				</form>
 
 				<div class="reponse" data-goodone="3">
+					<p class="rappel-question">D'après-vous, quelle est la proportion de handicap invisible?</p>
+
+					<p class="reponse-utilisateur"></p>
+
 					<p>Plus de 80% des handicaps sont invisibles. Comme le handicap est représenté communément par un fauteuil roulant, l'association "handicap lourd et visible" est très vite faite... mais elle est erronée!</p>
 
 					<p>"Seuls" 5% des personnes handicapées moteur sont en fauteuil par exemple. </p>
@@ -119,21 +131,21 @@
 				<form>
 					<div id="une-question-coordonnees">
 						<label for="prenom">Prénom</label>
-						<input type="text" id="prenom" name="prenom" />
+						<input type="text" id="prenom" name="prenom" required />
 
 						<label for="nom">Nom</label>
-						<input type="text" id="nom" name="nom" />
+						<input type="text" id="nom" name="nom" required />
 
 						<label for="email">Adresse e-mail</label>
-						<input type="text" id="email" name="email" />
+						<input type="email" id="email" name="email" required />
 
 						<label for="telephone">Téléphone</label>
-						<input type="text" id="telephone" name="telephone" />
+						<input type="text" id="telephone" name="telephone" required />
 					</div>
 
 					<div id="une-question-textarea">
 						<label for="question">Votre question</label>
-						<textarea id="question" name="question"></textarea>
+						<textarea id="question" name="question" required></textarea>
 					</div>
 
 					<input id="une-question-submit" type="submit" value="Envoyer" />
