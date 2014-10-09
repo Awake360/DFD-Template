@@ -15,17 +15,19 @@
     $('.question-form').on('submit', function (event) {
     	event.preventDefault();
 
-    	$(this).siblings('.reponse').slideDown();
-    	$(this).slideUp();
+        $(this).siblings('.reponse').slideDown();
+    	// $(this).siblings('.reponse').addClass('animated bounceOutLeft');
 
-    	var goodone = $(this).siblings('.reponse').attr('data-goodone');
-    	var reponse = $(this).find('input:checked').attr('value');
+    	$(this).slideUp('fast', function() {
+            var goodone = $(this).siblings('.reponse').attr('data-goodone');
+            var reponse = $(this).find('input:checked').attr('value');
 
-    	if (goodone == reponse) {
-    		$(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse</span>');
-    	} else {
-    		$(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse</span>');
-    	}
+            if (goodone == reponse) {
+                $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse</span>').addClass('animated bounceIn');
+            } else {
+                $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse</span>').addClass('animated bounceIn');
+            }
+        });
 
     	//Afficher ou non "question suivante"
     	if ($(this).closest('.question').next() .length === 0) {
@@ -74,4 +76,7 @@
 	    	$('#le-saviez-vous-texte-' + $(this).closest('.question').prev().attr('id')).show();
 	    }
     });
+
+    //Pimp my website
+    new WOW().init();
 }(jQuery));

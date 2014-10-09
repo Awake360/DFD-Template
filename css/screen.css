@@ -8,10 +8,13 @@ body {
 
 section {
 	overflow: hidden;
+	position: relative;
+	min-height: 100%;
 }
 
 h1 {
 	font-size: 400%;
+	line-height: 90%;
 	text-transform: uppercase;
 }
 
@@ -50,7 +53,8 @@ h2 .bold {
 }
 
 #presentation,
-#infos-complementaires {
+#infos-complementaires,
+#le-saviez-vous {
 	background: #ffffff url(../img/bg_site.jpg) no-repeat left top;
 	background-size: cover;
 	color: #ffffff;
@@ -88,11 +92,9 @@ h2 .bold {
 	}
 
 	#presentation-partenariat p {
-		color: #9c9e9f;
-		font-size: 125%;
+		color: black;
 		text-transform: uppercase;
-		line-height: 90%;
-		max-width: 70px;
+		font-weight: bold;
 	}
 
 	#presentation-partenariat img {
@@ -110,8 +112,31 @@ h2 .bold {
 		text-align: center;
 	}
 
+	#header-logo-dfd {
+		margin: 0 0 20px 0;
+	}
+
 /** QUESTIONNAIRE **/
-	#questionnaire {
+	.questions-counter {
+		font-size: 300%;
+		color: white;
+		line-height: 80%;
+		font-weight: bold;
+	}
+
+	.question-number {
+		background-color: #e67372;
+		display: inline-block;
+		padding: 5px;
+	}
+
+	.questions-count {
+		background-color: #e5e5e5;
+		display: inline-block;
+		padding: 5px;
+	}
+
+	#questions {
 		padding: 120px;
 		position: relative;
 	}
@@ -121,34 +146,45 @@ h2 .bold {
 		font-size: 200%;
 	}
 
+	.question-form {
+		text-align: center;
+	}
+
 	#questionnaire input[type='radio'] {
 		height: 30px;
 		width: 30px;
+		margin: 0  15px 0 30px;
 	}
 
 	#questionnaire label {
 		font-size: 200%;
-		margin: 0 50px 0 0;
+		margin: 0 30px 0 0;
 	}
 
 	#questionnaire input[type='submit'],
 	.question-suivante {
 		font-size: 200%;
-		position: absolute;
-		bottom: 0;
-		left: 415px;
 		border: none;
 		color: white;
 		font-weight: bold;
 		text-transform: uppercase;
-		padding: 0 5px 0 60px;
-		background: black url(../img/triangle-black.jpg) no-repeat left top;
-		width: 550px;
+		background-color: #e67372;
+		display: block;
+		margin: 40px auto;
+	}
+
+	.reponse {
+		text-align: center;
 	}
 
 	.reponse p {
 		font-weight: normal;
 		font-size: 110%;
+	}
+
+	p.reponse-utilisateur {
+		font-size: 150%;
+		font-weight: bold;
 	}
 
 	.question-precedente {
