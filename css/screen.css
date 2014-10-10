@@ -222,8 +222,17 @@ h2 .bold {
 		text-align: left;
 	}
 
-	.question-suivante.disabled {
+	/*.question-suivante.disabled {
 		background: transparent url(../img/fleche-droite-claire.png) no-repeat right center;
+	}*/
+
+	.question-suivante.disabled {
+		background: #e67372 none;
+		color: white;
+		width: auto;
+		text-align: center;
+		padding: 5px;
+		height: auto;
 	}
 
 	.question-precedente.disabled {
@@ -235,9 +244,17 @@ h2 .bold {
 	}
 
 /** LE SAVIEZ VOUS **/
+	#le-saviez-vous {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
 	#le-saviez-vous,
 	.le-saviez-vous-texte {
-		min-height: 250px;
+		min-height: 260px;
+		max-height: 260px;
 	}
 
 	#le-saviez-vous-header {
@@ -281,13 +298,76 @@ h2 .bold {
 		width: 70%;
 	}
 
+/** JEU CONCOURS **/
+	#jeu-concours {
+		text-align: center;
+	}
+
+	#jeu-concours h2 {
+		color: #e67372;
+		font-weight: bold;
+		text-transform: inherit;
+	}
+
+	#jeu-concours form {
+		width: 375px;
+		margin: 0 auto 30px;
+		text-align: right;
+		overflow: hidden;
+	}
+
+	#jeu-concours label {
+		font-weight: normal;
+		margin: 15px 0 0 0;
+		width: 120px;
+		font-size: 100%;
+		text-align: left;
+	}
+
+	#jeu-concours input {
+		color: black;
+		width: 250px;
+		border: 1px solid #e67372;
+	}
+
+	#jeu-concours a {
+		color: #e67372;
+		text-decoration: underline;
+		display: block;
+		margin: 20px 0;
+	}
+
+	#jeu-concours input[type="submit"] {
+		float: right;
+		font-size: 100%;
+		width: auto;
+		margin: auto;
+	}
+
+	#jeu-concours-sub {
+		border-top: 1px solid #e67372;
+		width: 80%;
+		margin: 30px auto;
+		clear: both;
+		text-align: left;
+		font-size: 70%;
+		padding: 10px 0;
+	}
+
+	#jeu-concours-sub a {
+		display: inline;
+	}
+
 /** UNE QUESTION **/
 	#une-question {
+		height: 100%;
 		width: 70%;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		padding: 50px 120px 130px;
 		background-color: rgb(0, 0, 0);
 		background-color: rgba(0, 0, 0, 0.8);
-		padding: 50px 120px 130px;
-		float: left;
 
 	}
 
@@ -337,15 +417,15 @@ h2 .bold {
 
 /** REFERENCES **/
 	#references {
-		background-color: rgb(255, 255, 255);
-		background-color: rgba(255, 255, 255, 0.8);
-		color: black;
+		color: white;
 		height: 100%;
 		width: 30%;
 		overflow: hidden;
 		position: absolute;
 		right: 0;
 		padding: 60px;
+		background-color: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 
 	#references img {
@@ -354,6 +434,12 @@ h2 .bold {
 
 	#references p {
 		font-size: 90%;
+	}
+
+	.element-reference {
+		border-left: 1px solid white;
+		margin-bottom: 30px;
+		padding-left: 20px;
 	}
 
 /** FONTS **/

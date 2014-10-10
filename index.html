@@ -92,29 +92,67 @@
 					</div>
 				</div>
 
-				<input type="button" class="question-precedente" value="Question&#13;&#10;précédente" />
-				<input type="button" class="question-suivante" value="Question&#13;&#10;suivante" />
+				<input type="button" class="question-precedente wow bounceInLeft" value="Question&#13;&#10;précédente" />
+				<input type="button" class="question-suivante wow bounceInRight" value="Question&#13;&#10;suivante" />
 			</section>
 
 			<section id="le-saviez-vous">
 				<header id="le-saviez-vous-header">
-					<img src="./img/le-saviez-vous.png" alt="Le saviez-vous ?" />
+					<img src="./img/le-saviez-vous.png" alt="Le saviez-vous ?" class="wow bounceInLeft" />
 				</header>
 
 				<div class="le-saviez-vous-texte" id="le-saviez-vous-texte-question-01">
 					<h2>Le <span class="bold">saviez-vous</span> ?</h2>
 
-					<p>6,6 % de la population française souffrent d'un déficit auditif. 88 % d'entre eux sont devenus sourds ou malentendants au cours de leur vie.</p>
-
-					<p>Seuls 1,6% des personnes sourdes et malentendantes pratiquent la langue des signes.</p>
-
-					<p>De nombreux aménagements existent pour permettre aux personnes de communiquer et de vivre au quotidien (boucles magnétiques, amplificateur, prothèses auditives très perfectionnées et discrètes, alarme ou réveil lumineux...).</p>
+					<p>6,6 % de la population française souffrent d'un déficit auditif. 88 % d'entre eux sont devenus sourds ou malentendants au cours de leur vie.<br/>Seuls 1,6% des personnes sourdes et malentendantes pratiquent la langue des signes.</p>
 				</div>
 
 				<div class="le-saviez-vous-texte" id="le-saviez-vous-texte-question-02">
 					<h2>Le <span class="bold">saviez-vous</span> ?</h2>
 
 					<p>85% des handicaps s'acquièrent au cours de la vie et non à la naissance.</p>
+				</div>
+			</section>
+
+			<section id="jeu-concours">
+				<h2>Participez au tirage au sort et tentez de remporter l'un des nombreux lots !</h2>
+
+				<p>Pour cela, remplissez les champs suivants et validez votre participation</p>
+
+				<form>
+					<div>
+						<label for="prenom">Prénom</label>
+						<input type="text" id="prenom" name="prenom" required />
+					</div>
+
+					<div>
+						<label for="nom">Nom</label>
+						<input type="text" id="nom" name="nom" required />
+					</div>
+
+					<div>
+						<label for="email">Adresse e-mail</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+
+					<div>
+						<label for="telephone">Ville</label>
+						<input type="text" id="telephone" name="telephone" required />
+					</div>
+
+					<a href="#" class="consulter-reglement">Consulter le règlement</a>
+
+					<input id="une-question-submit" type="submit" value="Valider" />
+				</form>
+
+				<div id="jeu-concours-sub">
+					<p>Jeu gratuit sans obligation d’achat, organisé par la société MAIF du XX/XX/2014 au XX/XX/2014 inclus.</p>
+
+					<p>La participation à ce jeu-concours gratuit et sans obligation d’achat implique l’acceptation pleine et entière du présent règlement par les participants et son application par la société organisatrice. Ce jeu-concours sera accessible sur le site Internet http://www.dfdconsulting.fr/quiz-maif. A l’issue du jeu-concours, XX participants ayant validé leur participation, seront tirés au sort par la société organisatrice dans la semaine suivant la fin du jeu-concours et remporteront selon l’ordre de tirage au sort les cadeaux présentés dans le règlement du jeu-concours.</p>
+
+					<p>Conformément aux dispositions de la loi n° 78-17 du 6 janvier 1978 dite « Informatique et Libertés », modifiée par la loi n° 2004-801 du 6 août 2004, vous disposez d'un droit d’information, d’accès, de rectification et d’opposition sur les données vous concernant.</p>
+
+					<p>Pour connaître le règlement du jeu, <a href="#" class="consulter-reglement">cliquez-ici.</a></p>
 				</div>
 			</section>
 		</section>
@@ -150,16 +188,16 @@
 			</section>
 
 			<section id="references">
-				<div>
+				<div class="element-reference">
 					<h3>Quiz réalisé pour :</h3>
 					<img src="./img/logo_maif.png" alt="Logo MAIF" />
 					<p>Mission Handicap MAIF<br/>200 avenue Salvador Allende<br/>CS 90000 - 79038 NIORT cedex 9<br/>Téléphone : 05.49.73.74.75<br/>E-mail : responsabilite.societale@maif.fr</p>
 				</div>
 
-				<div>
+				<div class="element-reference">
 					<h3>Quiz réalisé par :</h3>
 					<img src="./img/logo_dfd_consulting.png" alt="Logo DFD Consulting" />
-					<p>DFD Consulting<br/>12, sente de la Pyramide<br/>92100 BOULOGNE-BILLANCOURT<br/>Téléphone : 01.55. 20.61.23<br/>E-mail : contact@dfdconsulting.fr</p>
+					<p>DFD Consulting<br/>12, sente de la Pyramide<br/>92100 BOULOGNE-BILLANCOURT<br/>Téléphone : 01.55.20.61.23<br/>E-mail : contact@dfdconsulting.fr</p>
 				</div>
 			</section>
 		</section>

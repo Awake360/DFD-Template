@@ -1,10 +1,16 @@
 (function ($) {
+    var questionNextLabel = $('.question-suivante').attr('value');
+
     function updateButtons() {
         //Afficher ou non "question suivante"
         if ($('.current-question').next('.question').length === 0) {
             $('.question-suivante').addClass('disabled');
+
+            $('.question-suivante').attr('value', 'Participer au jeu concours');
         } else {
             $('.question-suivante').removeClass('disabled');
+
+            $('.question-suivante').attr('value', questionNextLabel);
         }
 
         //Afficher ou non "question précédente"
@@ -25,6 +31,7 @@
 	//Initialisation questions/reponses
     $('.reponse').hide();
     $('.question').hide();
+    $('#jeu-concours').hide();
     $('.question:first-child').show().addClass('current-question');
     $('.le-saviez-vous-texte').hide();
     $('.le-saviez-vous-texte').first().show();
@@ -70,7 +77,11 @@
 	    	//Affichage le saviez vous
 	    	$('.le-saviez-vous-texte').hide();
 	    	$('#le-saviez-vous-texte-' + $('.current-question').next('.question').attr('id')).show();
-	    }
+	    } else {
+            $('#questions').hide();
+            $('#le-saviez-vous').hide();
+            $('#jeu-concours').show();
+        }
     });
 
     //Question précédente
