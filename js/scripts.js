@@ -1,6 +1,9 @@
 (function ($) {
     var questionNextLabel = $('.question-suivante').attr('value');
 
+    $("#presentation-wrapper").css({backgroundSize: "cover"});
+    $("#le-saviez-vous-header").css({backgroundSize: "cover"});
+
     function updateButtons() {
         //Afficher ou non "question suivante"
         if ($('.current-question').next('.question').length === 0) {

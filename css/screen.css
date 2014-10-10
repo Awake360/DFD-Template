@@ -291,8 +291,7 @@ h2 .bold {
 		height: 100%;
 		min-width: 937px;
 		margin-left: 423px;
-		background-color: rgb(255, 255, 255);
-		background-color: rgba(255, 255, 255, 0.8);
+		background: transparent url(../img/bg-white.png) repeat;
 		padding: 30px 0;
 	}
 
