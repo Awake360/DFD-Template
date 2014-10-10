@@ -10,6 +10,7 @@
 		<link href="./css/bootstrap.min.css" rel="stylesheet">
 		<link href="./css/animate.css" rel="stylesheet">
 		<link href="./css/screen.css" rel="stylesheet">
+		<link href="./css/jquery.fancybox.css?v=2.1.5" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +31,7 @@
 				<div id="presentation-texte">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 					<br/>
-					<p class="bold">À la fin du quiz, participez au jeu-concours et gagnez de nombreux lots !</p>
+					<p class="bold">À la fin du quiz, participez au jeu-concours !</p>
 				</div>
 
 				<div id="presentation-partenariat">
@@ -82,7 +83,7 @@
 					<div class="reponse" data-goodone="3">
 						<p class="reponse-utilisateur"></p>
 
-						<p>Plus de 80% des handicaps sont invisibles. Comme le handicap est représenté communément par un fauteuil roulant, l'association "handicap lourd et visible" est très vite faite... mais elle est erronée!<br/>"Seuls" 5% des personnes handicapées moteur sont en fauteuil par exemple.<br/>Les types de handicap les plus représentés en entreprise sont, dans l'ordre décroissant, les maladies invalidantes (45%), le handicap psychique( 20%), le handicap moteur (16%) , le handicap mental (15%) et le handicap sensoriel (auditif et visuel 4%).</p>
+						<p>Plus de 80% des handicaps sont invisibles. Comme le handicap est représenté communément par un fauteuil roulant, l'association "handicap lourd et visible" est très vite faite... mais elle est erronée! "Seuls" 5% des personnes handicapées moteur sont en fauteuil par exemple.<br/>Les types de handicap les plus représentés en entreprise sont, dans l'ordre décroissant, les maladies invalidantes (45%), le handicap psychique( 20%), le handicap moteur (16%) , le handicap mental (15%) et le handicap sensoriel (auditif et visuel 4%).</p>
 					</div>
 				</div>
 
@@ -134,7 +135,7 @@
 						<input type="text" id="telephone" name="telephone" required />
 					</div>
 
-					<a href="#" class="consulter-reglement">Consulter le règlement</a>
+					<a href="#reglement" class="consulter-reglement">Consulter le règlement</a>
 
 					<input id="une-question-submit" type="submit" value="Valider" />
 				</form>
@@ -146,7 +147,7 @@
 
 					<p>Conformément aux dispositions de la loi n° 78-17 du 6 janvier 1978 dite « Informatique et Libertés », modifiée par la loi n° 2004-801 du 6 août 2004, vous disposez d'un droit d’information, d’accès, de rectification et d’opposition sur les données vous concernant.</p>
 
-					<p>Pour connaître le règlement du jeu, <a href="#" class="consulter-reglement">cliquez-ici.</a></p>
+					<p>Pour connaître le règlement du jeu, <a href="#reglement" class="consulter-reglement">cliquez-ici.</a></p>
 				</div>
 			</section>
 		</section>
@@ -196,11 +197,35 @@
 			</section>
 		</section>
 
+		<section id="reglement">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper nunc quis nisl sodales porttitor. Curabitur gravida, lorem et vehicula blandit, lectus neque ultricies augue, in consequat ligula ipsum in urna. Nam nibh dolor, dignissim sed iaculis at, mollis eu nulla. Curabitur commodo mi id ipsum varius ornare. Aliquam pharetra nec ex elementum sagittis. Vivamus pharetra volutpat tortor, id malesuada tellus venenatis eget. Phasellus ornare nisl risus, at pellentesque dui pulvinar eu. Nunc venenatis vehicula nisl nec dapibus. Ut et dolor id nibh laoreet consectetur. Vivamus feugiat dui nunc, vitae malesuada ante bibendum eget. Vivamus consequat euismod magna, id placerat odio pulvinar varius. Nunc a imperdiet ante. Suspendisse semper ex in tristique feugiat.</p>
+
+			<p>Phasellus lobortis risus ac efficitur suscipit. Proin maximus dictum tempus. Pellentesque interdum eros non justo molestie, vitae congue orci laoreet. Praesent porta, justo eu tincidunt auctor, enim nulla feugiat ante, non viverra lacus lectus vitae nunc. In fringilla quam velit. Nullam quam enim, elementum vestibulum mollis faucibus, viverra vel libero. Sed finibus nisi a felis ornare commodo. Proin pharetra sem enim, sit amet gravida nibh maximus ac. Quisque faucibus libero id placerat fermentum. Aliquam quis eros nibh. Curabitur a nunc sit amet dolor congue consequat. Aliquam dapibus at orci blandit egestas. Etiam varius nulla eu odio pellentesque euismod. Sed mattis odio sed lacus scelerisque porta.</p>
+
+			<p>Nullam semper, erat nec condimentum egestas, ex nulla rhoncus tellus, sit amet pellentesque erat sapien non quam. Quisque id tellus risus. Fusce lorem ipsum, porttitor at tristique a, eleifend nec justo. Nullam lacinia leo mi, eu luctus justo maximus vel. Praesent sit amet urna sapien. Quisque at est eu augue dapibus suscipit sit amet non mauris. Vivamus hendrerit pharetra ex vitae tristique. Mauris ullamcorper diam sit amet massa dictum, vitae semper magna molestie. In quis turpis vehicula nisi sollicitudin gravida ut at mi.</p>
+
+			<p>Nulla auctor diam in mi molestie, ut auctor justo eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec volutpat lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sodales gravida aliquam. Integer ut blandit velit. Donec iaculis lacinia commodo.</p>
+
+			<p>Vivamus a maximus elit. In commodo, neque efficitur gravida cursus, augue dolor blandit neque, et mattis eros mauris id libero. Praesent consequat faucibus mollis. Donec viverra metus diam, sit amet ornare neque ullamcorper id. Cras mauris augue, ornare vitae purus vel, eleifend efficitur nulla. Nullam augue odio, vulputate ut rutrum non, pharetra at sapien. Curabitur porta massa non metus congue feugiat. Cras et neque at urna tristique congue ut vel justo. Aenean placerat elementum lectus sit amet imperdiet. Sed nec ipsum eu sem eleifend scelerisque at suscipit risus. In nec cursus libero. In lacus felis, ullamcorper et nibh nec, faucibus posuere diam. Pellentesque tincidunt nec elit vel pretium. Integer vitae tincidunt ante, ac maximus ex.</p>
+
+			<p>Phasellus eu pulvinar lectus. Proin molestie rutrum pretium. Pellentesque a ipsum ac est tempus blandit ut in purus. Nullam id felis lacinia, tincidunt diam scelerisque, condimentum ipsum. Morbi eleifend pulvinar tortor vel bibendum. Donec sollicitudin libero non lorem euismod dapibus a sed libero. Aliquam eu tempor tellus, vitae pretium enim. Donec imperdiet egestas ultricies. Sed varius, lacus quis vestibulum gravida, ligula ex sollicitudin nisl, quis consectetur leo neque ac sapien. Fusce diam sem, aliquam in tortor vitae, varius varius nunc. In hac habitasse platea dictumst. Vestibulum tincidunt nibh et risus dictum, at suscipit mauris molestie. Curabitur id tincidunt quam.</p>
+
+			<p>Nullam eu tempus dui. Proin quis velit vehicula, sollicitudin odio nec, tincidunt velit. Donec eget egestas metus, ac consequat tellus. In eu libero ligula. Phasellus accumsan facilisis massa egestas venenatis. Pellentesque felis ligula, porta id metus sit amet, mollis venenatis ligula. Cras nec leo lacus. Etiam convallis erat vitae turpis sollicitudin eleifend. Etiam vitae eros dolor. Aliquam eget pulvinar dui. Nam vel volutpat dolor. Etiam ante velit, vestibulum blandit eleifend ut, luctus eu lectus. Donec elit arcu, lacinia sed egestas in, convallis sed libero. Phasellus porta dictum dolor, ultricies aliquet neque elementum sed.</p>
+
+			<p>In eget tristique lorem. Etiam ac ipsum id dolor lacinia rutrum. Vivamus vulputate ante in mi pellentesque dignissim. Pellentesque quis varius magna. Praesent rutrum pulvinar justo, eu ultrices nisi. Nunc nec nibh nunc. Sed auctor cursus viverra. Sed consequat rutrum quam eget scelerisque. Etiam eu enim non nisi hendrerit consectetur. Curabitur semper cursus pulvinar. Praesent quis metus sit amet libero dignissim gravida vel eget sapien. Maecenas eget elit commodo justo fringilla viverra eu et erat. Maecenas lacinia sed ex vel ornare. Integer finibus enim ut luctus congue. Maecenas bibendum tortor et tincidunt venenatis.</p>
+
+			<p>Nulla nec nisl nec purus consectetur pellentesque non a quam. Nunc id aliquam ex, sed scelerisque nunc. Maecenas mollis risus diam, cursus laoreet tortor facilisis id. Sed mollis, nunc vel tincidunt mattis, diam diam mollis ipsum, vitae ornare lectus diam efficitur tortor. Mauris venenatis ipsum vitae ornare rutrum. Nulla facilisis fringilla sodales. Cras vestibulum risus non elementum fringilla. Sed dictum at est ac ultrices. Donec in dolor cursus, auctor augue nec, ultricies neque. Aliquam volutpat metus vitae elit dictum varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere elit in pulvinar hendrerit. Phasellus quis ligula metus.</p>
+
+			<p>Nulla eget suscipit augue. Sed non vulputate dui, vitae eleifend sapien. Aliquam mi risus, aliquam venenatis porta at, aliquam in massa. Vestibulum semper euismod lacus nec eleifend. Ut in nunc vitae neque sodales lacinia at a tellus. Pellentesque vel porta quam. Fusce consectetur turpis id urna porttitor pharetra.</p>
+		</section>
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="./js/bootstrap.min.js"></script>
-		<script src="./js/wow.min.js"></script>
-		<script src="./js/scripts.js"></script>
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./js/wow.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<script type="text/javascript" src="./js/scripts.js"></script>
+
 	</body>
 </html>

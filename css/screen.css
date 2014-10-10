@@ -385,8 +385,7 @@ h2 .bold {
 		position: absolute;
 		left: 0;
 		padding: 50px 30px 130px 120px;
-		background-color: rgb(0, 0, 0);
-		background-color: rgba(0, 0, 0, 0.8);
+		background: transparent url(../img/bg-black.png) repeat;
 
 	}
 
@@ -444,8 +443,7 @@ h2 .bold {
 		position: absolute;
 		right: 0;
 		padding: 60px;
-		background-color: rgb(0, 0, 0);
-		background-color: rgba(0, 0, 0, 0.8);
+		background: transparent url(../img/bg-black.png) repeat;
 		line-height: 110%;
 	}
 

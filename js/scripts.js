@@ -50,9 +50,9 @@
         var reponse = $(this).find('input:checked').attr('value');
 
         if (goodone == reponse) {
-            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse</span>').addClass('animated bounceIn');
+            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse ! <img src="./img/bonne-reponse.png" alt="Bonne réponse !" /></span>').addClass('animated bounceIn');
         } else {
-            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse</span>').addClass('animated bounceIn');
+            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse ! <img src="./img/mauvaise-reponse.png" alt="Mauvaise réponse !" /></span>').addClass('animated bounceIn');
         }
     });
 
@@ -110,4 +110,24 @@
 
     //Pimp my website
     new WOW().init();
+
+    //Popins
+    $('#reglement').hide();
+    $('.consulter-reglement').on('click', function (event) {
+        event.preventDefault();
+
+
+    });
+
+    $('.consulter-reglement').fancybox({
+        maxWidth    : 800,
+        maxHeight   : 600,
+        fitToView   : false,
+        width       : '70%',
+        height      : '70%',
+        autoSize    : false,
+        closeClick  : false,
+        openEffect  : 'none',
+        closeEffect : 'none'
+    });
 }(jQuery));
