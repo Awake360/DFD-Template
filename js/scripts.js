@@ -1,4 +1,20 @@
 (function ($) {
+    function updateButtons() {
+        //Afficher ou non "question suivante"
+        if ($('.current-question').next('.question').length === 0) {
+            $('.question-suivante').addClass('disabled');
+        } else {
+            $('.question-suivante').removeClass('disabled');
+        }
+
+        //Afficher ou non "question précédente"
+        if ($('.current-question').prev('.question').length === 0) {
+            $('.question-precedente').addClass('disabled');
+        } else {
+            $('.question-precedente').removeClass('disabled');
+        }
+    }
+
 	//Smooth scroll
 	$("#presentation-acces-questionnaire").on('click', function (event) {
         event.preventDefault();
@@ -9,71 +25,75 @@
 	//Initialisation questions/reponses
     $('.reponse').hide();
     $('.question').hide();
-    $('.question:first-child').show();
+    $('.question:first-child').show().addClass('current-question');
+    $('.le-saviez-vous-texte').hide();
+    $('.le-saviez-vous-texte').first().show();
+
+    updateButtons();
 
     //Valider la réponse
     $('.question-form').on('submit', function (event) {
     	event.preventDefault();
 
-        $(this).siblings('.reponse').slideDown();
-    	// $(this).siblings('.reponse').addClass('animated bounceOutLeft');
+    	$(this).slideUp();
 
-    	$(this).slideUp('fast', function() {
-            var goodone = $(this).siblings('.reponse').attr('data-goodone');
-            var reponse = $(this).find('input:checked').attr('value');
+        $(this).siblings('.reponse').show().addClass('animated fadeInUp');
 
-            if (goodone == reponse) {
-                $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse</span>').addClass('animated bounceIn');
-            } else {
-                $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse</span>').addClass('animated bounceIn');
-            }
-        });
+        var goodone = $(this).siblings('.reponse').attr('data-goodone');
+        var reponse = $(this).find('input:checked').attr('value');
 
-    	//Afficher ou non "question suivante"
-    	if ($(this).closest('.question').next() .length === 0) {
-    		$(this).closest('.question').find('.question-suivante').hide();
-    	} else {
-    		$(this).closest('.question').find('.question-suivante').show();
-    	}
+        if (goodone == reponse) {
+            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse</span>').addClass('animated bounceIn');
+        } else {
+            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse</span>').addClass('animated bounceIn');
+        }
     });
 
     //Question suivante
     $('.question-suivante').on('click', function (event) {
     	event.preventDefault();
 
-    	if ($(this).closest('.question').next() .length > 0) {
-    		//Mise en forme question précédente
-    		$(this).closest('.question').next().find('.question-form').show();
-    		$(this).closest('.question').next().find('.reponse').hide();
+    	if ($('.current-question').next('.question').length > 0 && $(this).not('.disabled')) {
+    		$('.current-question').next('.question').find('.question-form').show();
+    		$('.current-question').next('.question').find('.reponse').hide();
 
 	    	//Affichage question
-	    	$(this).closest('.question').next().slideDown();
-	    	$(this).closest('.question').slideUp();
+	    	$('.current-question').next('.question').slideDown();
+	    	$('.current-question').slideUp('fast', function() {
+                var nextQuestion = $('.current-question').next('.question');
+                $('.current-question').removeClass('current-question');
+                nextQuestion.addClass('current-question');
+
+                updateButtons();
+            });
 
 	    	//Affichage le saviez vous
 	    	$('.le-saviez-vous-texte').hide();
-	    	$('#le-saviez-vous-texte-' + $(this).closest('.question').next().attr('id')).show();
+	    	$('#le-saviez-vous-texte-' + $('.current-question').next('.question').attr('id')).show();
 	    }
     });
 
     //Question précédente
-    $('.question-precedente').first().hide();
-
     $('.question-precedente').on('click', function (event) {
     	event.preventDefault();
 
-    	if ($(this).closest('.question').prev() .length > 0) {
-    		//Mise en forme question précédente
-    		$(this).closest('.question').prev().find('.question-form').show();
-    		$(this).closest('.question').prev().find('.reponse').hide();
+    	if ($('.current-question').prev('.question').length > 0 && $(this).not('.disabled')) {
+    		$('.current-question').prev('.question').find('.question-form').show();
+    		$('.current-question').prev('.question').find('.reponse').hide();
 
 	    	//Affichage question
-	    	$(this).closest('.question').prev().slideDown();
-	    	$(this).closest('.question').slideUp();
+	    	$('.current-question').prev('.question').slideDown();
+	    	$('.current-question').slideUp('fast', function() {
+                var prevQuestion = $('.current-question').prev();
+                $('.current-question').removeClass('current-question');
+                prevQuestion.addClass('current-question');
+
+                updateButtons();
+            });
 
 	    	//Affichage le saviez vous
 	    	$('.le-saviez-vous-texte').hide();
-	    	$('#le-saviez-vous-texte-' + $(this).closest('.question').prev().attr('id')).show();
+	    	$('#le-saviez-vous-texte-' + $('.current-question').prev('.question').attr('id')).show();
 	    }
     });
 

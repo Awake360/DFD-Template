@@ -118,6 +118,7 @@ h2 .bold {
 
 /** QUESTIONNAIRE **/
 	.questions-counter {
+		text-align: center;
 		font-size: 300%;
 		color: white;
 		line-height: 80%;
@@ -141,7 +142,8 @@ h2 .bold {
 		position: relative;
 	}
 
-	.question p {
+	p.rappel-question {
+		text-align: center;
 		font-weight: bold;
 		font-size: 200%;
 	}
@@ -161,8 +163,7 @@ h2 .bold {
 		margin: 0 30px 0 0;
 	}
 
-	#questionnaire input[type='submit'],
-	.question-suivante {
+	#questionnaire input[type='submit'] {
 		font-size: 200%;
 		border: none;
 		color: white;
@@ -187,13 +188,46 @@ h2 .bold {
 		font-weight: bold;
 	}
 
+	.question-suivante,
 	.question-precedente {
-		position: absolute;
-		top: 30px;
-		left: 30px;
-		color: grey;
-		padding: 5px;
+		font-size: 150%;
+		color: #e67372;
+		font-weight: bold;
 		text-transform: uppercase;
+		position: absolute;
+		border: none;
+		background-color: transparent;
+		height: 75px;
+		line-height: 100%;
+	}
+
+	.question-suivante.disabled,
+	.question-precedente.disabled {
+		color: #f7d0d0;
+	}
+
+	.question-suivante {
+		bottom: 30px;
+		right: 20%;
+		padding-right: 80px;
+		background: transparent url(../img/fleche-droite.png) no-repeat right center;
+		text-align: right;
+	}
+
+	.question-precedente {
+		bottom: 30px;
+		left: 20%;
+		padding-left: 80px;
+		background: transparent url(../img/fleche-gauche.png) no-repeat left center;
+		text-align: left;
+	}
+
+	.question-suivante.disabled {
+		background: transparent url(../img/fleche-droite-claire.png) no-repeat right center;
+	}
+
+	.question-precedente.disabled {
+		background: transparent url(../img/fleche-gauche-claire.png) no-repeat left center;
 	}
 
 	.reponse p.rappel-question {
@@ -201,8 +235,9 @@ h2 .bold {
 	}
 
 /** LE SAVIEZ VOUS **/
-	#le-saviez-vous {
-		height: 375px;
+	#le-saviez-vous,
+	.le-saviez-vous-texte {
+		min-height: 250px;
 	}
 
 	#le-saviez-vous-header {
@@ -211,11 +246,11 @@ h2 .bold {
 		background: transparent url(../img/bg_le_saviez_vous.png) no-repeat left top;
 		background-size: cover;
 		padding: 50px 0 0 40px;
-		float: left;
-	}
 
-	#le-saviez-vous-header h2 .bold {
-		font-size: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
 	}
 
 	#le-saviez-vous-header img {
@@ -228,18 +263,22 @@ h2 .bold {
 		margin-left: 423px;
 		background-color: rgb(255, 255, 255);
 		background-color: rgba(255, 255, 255, 0.8);
-		padding: 100px 0 80px;
+		padding: 30px 0;
+	}
+
+	.le-saviez-vous-texte h2 {
+		color: red;
+		font-size: 150%;
+	}
+
+	.le-saviez-vous-texte h2 .bold {
+		font-size: 100%;
 	}
 
 	.le-saviez-vous-texte p {
 		color: black;
 		font-size: 110%;
 		width: 70%;
-	}
-
-	.le-saviez-vous-texte .bold {
-		color: red;
-		font-size: 150%;
 	}
 
 /** UNE QUESTION **/
