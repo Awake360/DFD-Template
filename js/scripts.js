@@ -65,8 +65,8 @@
     		$('.current-question').next('.question').find('.reponse').hide();
 
 	    	//Affichage question
-	    	$('.current-question').next('.question').slideDown();
-	    	$('.current-question').slideUp('fast', function() {
+	    	$('.current-question').next('.question').slideDown('slow');
+	    	$('.current-question').slideUp('slow', function() {
                 var nextQuestion = $('.current-question').next('.question');
                 $('.current-question').removeClass('current-question');
                 nextQuestion.addClass('current-question');
@@ -93,8 +93,8 @@
     		$('.current-question').prev('.question').find('.reponse').hide();
 
 	    	//Affichage question
-	    	$('.current-question').prev('.question').slideDown();
-	    	$('.current-question').slideUp('fast', function() {
+	    	$('.current-question').prev('.question').slideDown('slow');
+	    	$('.current-question').slideUp('slow', function() {
                 var prevQuestion = $('.current-question').prev();
                 $('.current-question').removeClass('current-question');
                 prevQuestion.addClass('current-question');
