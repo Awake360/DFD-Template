@@ -7,11 +7,11 @@
     function updateButtons() {
         //Afficher ou non "question suivante"
         if ($('.current-question').next('.question').length === 0) {
-            $('.question-suivante').addClass('disabled');
+            $('.question-suivante').addClass('gotoform');
 
             $('.question-suivante').attr('value', 'Participer au jeu concours');
         } else {
-            $('.question-suivante').removeClass('disabled');
+            $('.question-suivante').removeClass('gotoform');
 
             $('.question-suivante').attr('value', questionNextLabel);
         }
@@ -38,6 +38,7 @@
     $('.question:first-child').show().addClass('current-question');
     $('.le-saviez-vous-texte').hide();
     $('.le-saviez-vous-texte').first().show();
+    $('.question-suivante').addClass('disabled');
 
     updateButtons();
 
@@ -48,6 +49,8 @@
     	$(this).slideUp();
 
         $(this).siblings('.reponse').show().addClass('animated fadeInUp');
+
+        $('.question-suivante').removeClass('disabled');
 
         var goodone = $(this).siblings('.reponse').attr('data-goodone');
         var reponse = $(this).find('input:checked').attr('value');
@@ -63,9 +66,10 @@
     $('.question-suivante').on('click', function (event) {
     	event.preventDefault();
 
-    	if ($('.current-question').next('.question').length > 0 && $(this).not('.disabled')) {
+    	if ($('.current-question').next('.question').length > 0 && !$(this).hasClass('gotoform') && !$(this).hasClass('disabled')) {
     		$('.current-question').next('.question').find('.question-form').show();
     		$('.current-question').next('.question').find('.reponse').hide();
+            $('.question-suivante').addClass('disabled');
 
 	    	//Affichage question
 	    	$('.current-question').next('.question').slideDown('slow');
@@ -80,7 +84,7 @@
 	    	//Affichage le saviez vous
 	    	$('.le-saviez-vous-texte').hide();
 	    	$('#le-saviez-vous-texte-' + $('.current-question').next('.question').attr('id')).show();
-	    } else {
+	    } else if ($(this).hasClass('gotoform') && !$(this).hasClass('disabled')) {
             $('#questions').hide();
             $('#le-saviez-vous').hide();
             $('#jeu-concours').show();
@@ -91,9 +95,10 @@
     $('.question-precedente').on('click', function (event) {
     	event.preventDefault();
 
-    	if ($('.current-question').prev('.question').length > 0 && $(this).not('.disabled')) {
+    	if ($('.current-question').prev('.question').length > 0 && !$(this).hasClass('gotoform') && !$(this).hasClass('disabled')) {
     		$('.current-question').prev('.question').find('.question-form').show();
     		$('.current-question').prev('.question').find('.reponse').hide();
+            $('.question-suivante').addClass('disabled');
 
 	    	//Affichage question
 	    	$('.current-question').prev('.question').slideDown('slow');

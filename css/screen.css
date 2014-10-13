@@ -118,12 +118,12 @@ h2 .bold {
 
 /** QUESTIONNAIRE **/
 	#questionnaire {
-		min-height: 800px;
+		/*min-height: 800px;*/
 	}
 
 	.questions-counter {
 		text-align: center;
-		font-size: 300%;
+		font-size: 250%;
 		color: white;
 		line-height: 80%;
 		font-weight: bold;
@@ -143,21 +143,22 @@ h2 .bold {
 	}
 
 	#questions {
-		padding: 20px 80px 80px;
+		/*padding: 20px 80px 80px;*/
+		padding: 20px 80px 350px;
 		position: relative;
 	}
 
-	#questions {
+	/*#questions {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
-	}
+	}*/
 
 	p.rappel-question {
 		text-align: center;
 		font-weight: bold;
-		font-size: 200%;
+		font-size: 150%;
 	}
 
 	.question-form {
@@ -171,7 +172,7 @@ h2 .bold {
 	}
 
 	#questionnaire label {
-		font-size: 200%;
+		font-size: 150%;
 		margin: 0 30px 0 0;
 	}
 
@@ -183,7 +184,7 @@ h2 .bold {
 		text-transform: uppercase;
 		background-color: #de4443;
 		display: block;
-		margin: 40px auto;
+		margin: 20px auto;
 		line-height: 40px;
 	}
 
@@ -203,12 +204,12 @@ h2 .bold {
 
 	.question-suivante,
 	.question-precedente {
-		font-size: 150%;
+		font-size: 125%;
 		color: #de4443;
 		font-weight: bold;
 		text-transform: uppercase;
 		position: absolute;
-		bottom: 300px;
+		bottom: 275px;
 		border: none;
 		background-color: transparent;
 		height: 75px;
@@ -220,13 +221,6 @@ h2 .bold {
 		color: #f7d0d0;
 	}
 
-	.question-suivante {
-		right: 15%;
-		padding-right: 80px;
-		background: transparent url(../img/fleche-droite.png) no-repeat right center;
-		text-align: right;
-	}
-
 	.question-precedente {
 		left: 15%;
 		padding-left: 80px;
@@ -234,11 +228,22 @@ h2 .bold {
 		text-align: left;
 	}
 
-	/*.question-suivante.disabled {
-		background: transparent url(../img/fleche-droite-claire.png) no-repeat right center;
-	}*/
+	.question-suivante {
+		right: 15%;
+		padding-right: 80px;
+		background: transparent url(../img/fleche-droite.png) no-repeat right center;
+		text-align: right;
+	}
+
+	.question-precedente.disabled {
+		background: transparent url(../img/fleche-gauche-claire.png) no-repeat left center;
+	}
 
 	.question-suivante.disabled {
+		background: transparent url(../img/fleche-droite-claire.png) no-repeat right center;
+	}
+
+	.question-suivante.gotoform {
 		background: #de4443 none;
 		color: white;
 		width: auto;
@@ -246,10 +251,6 @@ h2 .bold {
 		padding: 5px;
 		height: auto;
 		font-size: 150%;
-	}
-
-	.question-precedente.disabled {
-		background: transparent url(../img/fleche-gauche-claire.png) no-repeat left center;
 	}
 
 	.reponse p.rappel-question {
@@ -266,8 +267,8 @@ h2 .bold {
 
 	#le-saviez-vous,
 	.le-saviez-vous-texte {
-		min-height: 260px;
-		max-height: 260px;
+		min-height: 240px;
+		max-height: 240px;
 	}
 
 	#le-saviez-vous-header {
@@ -374,7 +375,7 @@ h2 .bold {
 
 /** UNE QUESTION **/
 	#infos-complementaires {
-		min-height: 700px;
+		/*min-height: 700px;*/
 	}
 
 	#une-question {
@@ -383,7 +384,7 @@ h2 .bold {
 		overflow: hidden;
 		position: absolute;
 		left: 0;
-		padding: 50px 30px 130px 120px;
+		padding: 50px 60px 130px 120px;
 		background: transparent url(../img/bg-black.png) repeat;
 
 	}
@@ -435,14 +436,14 @@ h2 .bold {
 
 /** REFERENCES **/
 	#references {
-		color: white;
+		color: black;
 		height: 100%;
 		width: 35%;
 		overflow: hidden;
 		position: absolute;
 		right: 0;
-		padding: 60px;
-		background: transparent url(../img/bg-black.png) repeat;
+		padding: 60px 30px;
+		background: transparent url(../img/bg-white.png) repeat;
 		line-height: 110%;
 	}
 
