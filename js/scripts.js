@@ -56,9 +56,11 @@
         var reponse = $(this).find('input:checked').attr('value');
 
         if (goodone == reponse) {
-            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse ! <img src="./img/bonne-reponse.png" alt="Bonne réponse !" /></span>').addClass('animated bounceIn');
+            // $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green">Bonne réponse ! <img src="./img/bonne-reponse.png" alt="Bonne réponse !" /></span>').addClass('animated bounceIn');
+            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="green"><img src="./img/tmp-bonne-reponse.png" alt="Bonne réponse !" /></span>').addClass('animated bounceIn');
         } else {
-            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse ! <img src="./img/mauvaise-reponse.png" alt="Mauvaise réponse !" /></span>').addClass('animated bounceIn');
+            // $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red">Mauvaise réponse ! <img src="./img/mauvaise-reponse.png" alt="Mauvaise réponse !" /></span>').addClass('animated bounceIn');
+            $(this).siblings('.reponse').find('.reponse-utilisateur').html('<span class="red"><img src="./img/tmp-mauvaise-reponse.png" alt="Mauvaise réponse !" /></span>').addClass('animated bounceIn');
         }
     });
 
