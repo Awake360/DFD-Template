@@ -125,8 +125,6 @@
     $('#reglement').hide();
     $('.consulter-reglement').on('click', function (event) {
         event.preventDefault();
-
-
     });
 
     $('.consulter-reglement').fancybox({
@@ -139,5 +137,12 @@
         closeClick  : false,
         openEffect  : 'none',
         closeEffect : 'none'
+    });
+
+    //Effet temporaire pour le formulaire
+    $('#participation').on('submit', function (event) {
+        event.preventDefault();
+
+        window.location.href = "#infos-complementaires";
     });
 }(jQuery));
